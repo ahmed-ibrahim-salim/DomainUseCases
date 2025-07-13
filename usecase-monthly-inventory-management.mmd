@@ -1,0 +1,16 @@
+flowchart LR
+  Admin([Admin])
+
+  subgraph MonthlyInventorySystem["Monthly Inventory Management System"]
+    ViewInventoryTableUC((View Monthly Inventory Table))
+    GenerateExcelTemplateUC((Generate/Export Excel Template))
+	PrintInventoryReportUC((Print Inventory Report))
+    UploadPreviewExcelUC((Upload/Preview Physical Excel Sheet))
+    SaveInventoryCountsUC((Save Physical Inventory Counts))
+  end
+
+  Admin -- View Table --> ViewInventoryTableUC
+  Admin -- Generate/Export Excel Template --> GenerateExcelTemplateUC
+  Admin -- Print Inventory Report --> PrintInventoryReportUC
+  Admin -- Upload/Preview Physical Excel Sheet --> UploadPreviewExcelUC
+  Admin -- Save Physical Inventory Counts --> SaveInventoryCountsUC
